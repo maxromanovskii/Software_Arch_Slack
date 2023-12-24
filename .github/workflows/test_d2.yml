@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps: 
       - name: test d2 code
-        uses: actions/ckeckout@v3
+        uses: actions/checkout@v3
       - name: install independensis 
         run: npm ci 
       - name: test aplications
