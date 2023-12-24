@@ -7,6 +7,6 @@ jobs:
       - name: test d2 code
         uses: actions/checkout@v3
       - name: install independensis 
-        run: npm ci 
+        run: curl -fsSL https://d2lang.com/install.sh | sh -s --
       - name: test aplications
-        run: npm run test
+        run: d2 --watch in.d2 first_try.svg
