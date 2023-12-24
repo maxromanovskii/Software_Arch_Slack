@@ -9,4 +9,4 @@ jobs:
       - name: install independensis 
         run: curl -fsSL https://d2lang.com/install.sh | sh -s --
       - name: test aplications
-        run: d2 --watch in.d2 first_try.svg
+        run: d2 --watch first_try.d2 first_try.svg
