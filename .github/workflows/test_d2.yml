@@ -1,7 +1,7 @@
-name: Test d2
+name: deploy and add to readme d2
 on: push 
 jobs:
-  test:
+  deploy:
     runs-on: ubuntu-latest
     steps: 
       - name: test d2 code
@@ -9,4 +9,4 @@ jobs:
       - name: install independensis 
         run: curl -fsSL https://d2lang.com/install.sh | sh -s --
       - name: test aplications
-        run: d2 --watch first_try.d2 first_try.svg
+        run: d2 first_try.d2 first_try.svg
