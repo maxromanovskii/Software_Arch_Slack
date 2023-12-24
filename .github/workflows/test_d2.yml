@@ -1,14 +1,29 @@
 name: deploy and add to readme d2
 on: push 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
     steps: 
       - name: test d2 code
         uses: actions/checkout@v3
       - name: install independensis 
         run: curl -fsSL https://d2lang.com/install.sh | sh -s --
-      - name: derectore 
+      - name: derectory
         run: pwd
       - name: test aplications
         run: d2 first_try.d2 --watch first_try.svg
+      - name: upload artifacts
+        uses: actions/upload-artifact@v3
+        with: 
+          path: /home/runner/work/Software_Arch_Slack/Software_Arch_Slack
+          name: first_try.svg
+  deploy: 
+    needs: build
+    runs-on: ubuntu-latest
+    steps: 
+      - name: get svg file to arhifats
+        uses: actions/download-artifact@v3
+        with: 
+          name: first_try.svg
+
+
