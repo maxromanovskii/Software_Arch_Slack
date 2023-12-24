@@ -11,4 +11,4 @@ jobs:
       - name: derectore 
         run: pwd
       - name: test aplications
-        run: d2 first_try.d2 first_try.svg
+        run: d2 first_try.d2 --watch first_try.svg

@@ -1,1 +1,0 @@
-![example event parameter](https://github.com/github/docs/actions/workflows/main.yml/first_try.svg?event=push)
