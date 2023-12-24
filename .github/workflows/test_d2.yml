@@ -1,0 +1,11 @@
+name: Test d2
+on: push 
+jobs:
+  runs-on: ubuntu-latest
+  stepa: 
+    - name: test d2 code
+      uses: actions/ckeckout@v3
+    - name: install independensis 
+      run: npm ci 
+    - name: test aplications
+      run: npm run test
