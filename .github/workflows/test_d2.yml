@@ -26,6 +26,7 @@ jobs:
         with: 
           name: first_try.svg
   pack:
+    needs: test
     runs-on: ubuntu-latest
     steps: 
       - run: pwd
