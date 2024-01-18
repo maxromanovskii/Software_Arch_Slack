@@ -17,7 +17,7 @@ jobs:
         with: 
           path: /home/runner/work/Software_Arch_Slack/Software_Arch_Slack
           name: first_try.svg
-  deploy: 
+  test: 
     needs: build
     runs-on: ubuntu-latest
     steps: 
@@ -25,5 +25,10 @@ jobs:
         uses: actions/download-artifact@v3
         with: 
           name: first_try.svg
+  pack:
+    runs-on: ubuntu-latest
+    steps: 
+      - name: pack1
+      - run: pwd
 
 
