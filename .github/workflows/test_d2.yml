@@ -28,7 +28,6 @@ jobs:
   pack:
     runs-on: ubuntu-latest
     steps: 
-      - name: pack1
       - run: pwd
 
 
